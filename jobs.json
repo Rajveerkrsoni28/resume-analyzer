@@ -1,0 +1,18 @@
+[
+  {
+    "role": "Frontend Developer",
+    "skills": ["HTML", "CSS", "JavaScript", "React"]
+  },
+  {
+    "role": "Backend Developer",
+    "skills": ["Node.js", "Express", "MongoDB", "Python"]
+  },
+  {
+    "role": "Full Stack Developer",
+    "skills": ["HTML", "CSS", "JavaScript", "React", "Node.js", "Express", "MongoDB"]
+  },
+  {
+    "role": "Data Scientist",
+    "skills": ["Python", "Pandas", "Machine Learning", "SQL", "Statistics"]
+  }
+]

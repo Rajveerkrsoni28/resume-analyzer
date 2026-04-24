@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- PDF.js for parsing PDF resumes -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="header-top">
+                <h1>AI Resume Analyzer</h1>
+                <button id="darkModeToggle" class="btn theme-btn">🌙 Dark Mode</button>
+            </div>
+            <p>Upload your resume to discover your best-fit job role.</p>
+        </header>
+
+        <main>
+            <section class="upload-section">
+                <!-- PDF Resume Upload support added -->
+                <input type="file" id="resumeInput" accept=".txt, .pdf" />
+                <div id="file-name-display" class="file-name">No file chosen</div>
+                <button id="analyzeBtn" class="btn primary-btn">Analyze Resume</button>
+                <div id="error-message" class="error-msg hidden"></div>
+            </section>
+
+            <section id="resultCard" class="result-card hidden">
+                <h2>Top Matching Roles</h2>
+
+                <!-- Multiple Job Role Comparison & Progress Bar -->
+                <div id="topRolesContainer" class="roles-container">
+                    <!-- Roles will be injected here dynamically -->
+                </div>
+
+                <div class="skills-section">
+                    <h3>Your Extracted Skills:</h3>
+                    <ul id="matchedSkills" class="skills-list matched"></ul>
+                </div>
+
+                <div class="skills-section">
+                    <h3>Skills to Learn:</h3>
+                    <ul id="missingSkills" class="skills-list missing"></ul>
+                </div>
+
+                <!-- Resume Keyword Highlighting -->
+                <div class="skills-section highlight-section">
+                    <h3>Resume Highlights:</h3>
+                    <div id="highlightedText" class="highlighted-text"></div>
+                </div>
+
+                <button id="downloadPdfBtn" class="btn secondary-btn hidden">Download Report (Coming Soon)</button>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
